@@ -14,7 +14,7 @@ function Page(props: Props) {
   useEffect(() => {
     if (params) {
       axios
-        .get(`http://localhost:3001/articles/${params}`, { withCredentials: true })
+        .get(`https://blog-server2-m5k0.onrender.com/articles/${params}`, { withCredentials: true })
         .then((response) => {
           setData(response.data.post);
         })
@@ -28,7 +28,7 @@ function Page(props: Props) {
     setLikes(likes + 1);
     try {
         const res = await axios.put(
-          "http://localhost:3001/articles/likes",
+          "https://blog-server2-m5k0.onrender.com/articles/likes",
           {},
           {
             headers: {

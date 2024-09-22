@@ -18,6 +18,8 @@ app.use("/users", users_1.default);
 app.use("/articles", articles_1.default);
 app.use("/comments", comments_1.default);
 app.listen(port, () => {
-    console.log(`listening  http://localhost:${port}`);
+    console.log(`listening`);
 });
-mongoose_1.default.connect('mongodb+srv://sahith:sahith__123@cluster0.f9xv7te.mongodb.net/');
+mongoose_1.default.connect(process.env.MONGODB_URI ? process.env.MONGODB_URI : "")
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));

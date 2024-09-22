@@ -57,16 +57,18 @@ import React, { useState, useEffect } from 'react';
 import Glowbutton from '../Components/Glowbutton';
 import Link from 'next/link';
 import Home from '../page';
+import { useAuth } from '@/context';
 
 
 function Signup() {
+    const {login} = useAuth()
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [session, setSession] = useState(null); // Store session here
     const [errorMessage, setErrorMessage] = useState("");
 
     const signuphandler = () => {
-        fetch("http://localhost:3001/users/signup", {
+        fetch("https://blog-server2-m5k0.onrender.com/users/signup", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -88,6 +90,7 @@ function Signup() {
           if(data.message =='user exists'){alert("already exist")}
           else{
             console.log('Signup successful:', data);
+          login()
             setSession(data.message);  
     }})
         .catch((error) => {

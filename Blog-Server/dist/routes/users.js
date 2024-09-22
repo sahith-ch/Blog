@@ -26,7 +26,7 @@ router.post("/login", (req, res) => __awaiter(void 0, void 0, void 0, function* 
         res.cookie('authToken', token, {
             httpOnly: true,
             path: '/',
-            secure: false,
+            secure: true,
             sameSite: 'lax',
             maxAge: 24 * 60 * 60 * 1000,
         });

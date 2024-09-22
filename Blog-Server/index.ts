@@ -16,4 +16,6 @@ app.use("/comments",comments)
 app.listen(port, () => {
     console.log(`listening`)
 })
-mongoose.connect('mongodb+srv://sahith:sahith__123@cluster0.f9xv7te.mongodb.net/')
+mongoose.connect(process.env.MONGODB_URI?process.env.MONGODB_URI:"")
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error('MongoDB connection error:', err));

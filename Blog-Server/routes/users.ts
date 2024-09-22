@@ -17,7 +17,7 @@ if(user){
   res.cookie('authToken', token, {
     httpOnly: true,
     path: '/',
-    secure: false, 
+    secure: true, 
     sameSite: 'lax',
     maxAge: 24 * 60 * 60 * 1000,  
 });

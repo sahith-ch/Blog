@@ -55,7 +55,7 @@ e.preventDefault()
         try {
 
 
-            const response = await axios.post("http://localhost:3001/articles/", post, {
+            const response = await axios.post("https://blog-server2-m5k0.onrender.com/articles/", post, {
                 withCredentials: true,
 
  

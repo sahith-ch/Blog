@@ -18,7 +18,7 @@ const {login} = useAuth()
         setLoading(true); // Start loading
 
         try {
-            const { data } = await axios.post("http://localhost:3001/users/login", { username, password }, { withCredentials: true });
+            const { data } = await axios.post("https://blog-server2-m5k0.onrender.com/users/login", { username, password }, { withCredentials: true });
 
             if (data.message === "loggedin") {
                 login()

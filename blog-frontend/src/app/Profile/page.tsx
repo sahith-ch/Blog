@@ -26,7 +26,7 @@ const Profile = (props: Props) => {
   const [data, setData] = useState<UserData | null>(null);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/users/me", { withCredentials: true })
+    axios.get("https://blog-server2-m5k0.onrender.com/users/me", { withCredentials: true })
       .then((response) => {
         setData(response.data.data);
         console.log(response.data.data);
@@ -38,7 +38,7 @@ const Profile = (props: Props) => {
   const { logout } = useAuth();
 
   const logoutHandler = () => {
-    fetch("http://localhost:3001/users/logout", {
+    fetch("https://blog-server2-m5k0.onrender.com/users/logout", {
       method: 'POST',
       credentials: 'include'
     })

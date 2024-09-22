@@ -12,7 +12,7 @@ function Home() {
     const [inputVal, setInputVal] = useState<string>('');
 
     useEffect(() => {
-        axios.get('http://localhost:3001/articles/', { withCredentials: true })
+        axios.get('https://blog-server2-m5k0.onrender.com/articles/', { withCredentials: true })
             .then((response) => {
                 console.log(response.data.posts);
                 setData(response.data.posts);
