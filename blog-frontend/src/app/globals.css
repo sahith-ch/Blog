@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+
+margin: 0%;
+ background-color: white;
+
+}
+html,body{
+  height:100vh;
+
+   scrollbar-color: #777 #555; 
+  }
+*{
+  box-sizing: border-box;
+}
+.ql-container{
+  font-size: 28px !important;
+}

@@ -1,0 +1,43 @@
+.container{
+    background: #dae0f5;    
+display: flex;
+justify-content: center;
+box-sizing: border-box;
+position: relative;
+min-height: 94vh !important;
+
+}
+
+.latest{
+ 
+    display: flex;
+    flex-direction: column;
+   height: 100%;
+    width: 60vw;
+    margin-top: 50px;
+
+}
+.trending{
+   display: none;
+
+}
+@media screen and (min-width:768px) {
+    .trending{
+        display: flex;
+         width: 25vw;
+         flex-direction: column;
+         height: 900px;
+         position: relative;
+         top:0px;
+     margin-top:10px ;
+         align-items: center;
+     }
+     
+}
+.cardContainer{
+    margin: 13px;
+    border-radius: 10px;
+    background: #ccd1e5;
+    box-shadow:  12px 12px 21px #afb4c5,
+                 -12px -12px 21px #e9eeff;
+}

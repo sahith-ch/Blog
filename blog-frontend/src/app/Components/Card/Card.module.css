@@ -1,0 +1,38 @@
+.image{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-size: cover;
+    margin: 0.3rem;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    width:80%;
+border: 1px solid black;
+   margin: 1rem;
+   padding: 0.2rem;
+}
+
+.thumbnail{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6rem;
+}
+.title{
+    font-size: large;
+    font-weight: bold;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+}

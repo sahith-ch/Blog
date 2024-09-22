@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.Search{
+    width: 100%;
+    border: none;
+    padding: 1.2rem;
+margin: 1%;
+    transition: 0.3s;
+    border-radius: 33px;
+    background: linear-gradient(145deg, #dae0f5, #b8bcce);
+    box-shadow:  10px 10px 20px #a7abbc,
+                 -10px -10px 20px #f1f7ff;
+}
+.Search::placeholder{
+    color: rgb(34, 34, 247);
+}
+.Search:focus{
+   outline: none;
+    border-radius: 33px;
+    background: #ccd1e5;
+    box-shadow: inset 10px 10px 20px #a7abbc,
+                inset -10px -10px 20px #f1f7ff;
+}

@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var body_parser_1 = require("body-parser");
+var express_1 = require("express");
+var users_1 = require("./routes/users");
+var comments_1 = require("./routes/comments");
+var mongoose_1 = require("mongoose");
+var articles_1 = require("./routes/articles");
+var cors_1 = require("cors");
+var app = (0, express_1.default)();
+var port = 3000;
+app.use((0, cors_1.default)({ origin: '*', methods: ["GET", "POST", "PUT", "DELETE"] }));
+app.use(body_parser_1.default.json());
+app.use("/users", users_1.default);
+app.use("/articles", articles_1.default);
+app.use("/comments", comments_1.default);
+app.listen(port, function () {
+    console.log("listening  http://localhost:".concat(port));
+});
+mongoose_1.default.connect('mongodb+srv://sahith:sahith__123@cluster0.f9xv7te.mongodb.net/');
